@@ -1,0 +1,24 @@
+library(rjson)
+install.packages("rjson")
+
+df=data.frame()
+
+for (i in 1:10) {
+  
+  
+  df=rbind(df,fromJSON(paste0("text", as.character(i), ".json")))
+  
+}
+
+  print(df)
+  
+
+  library(rjson)
+  install.packages("rjson")
+  
+  js<-'{"name": null, "release_date_local": null, "title", "3 (2011)", "opening_weekend_take": 1234, "year": 2011,
+  "release_date_wide": "2011-09-16", "gross": 59954}'
+  js
+
+  df=as.data.frame(x = js)
+  df
